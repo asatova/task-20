@@ -1,14 +1,30 @@
 // 1-task
+
 let address = {
-    street: 'yakkasaroy',
-    city: 'tashkent',
-    zipcode: '10000'
+    street: "Abdulla Qahhor kochasi",
+    city: "Toshkent",
+    zipcode: "10001"
 };
-console.log(address);
-const showAddress = Object.entries(address);
+
+// showAddress funksiyasi
+function showAddress(address) {
+    for (let key in address) {
+        console.log(key + ": " + address[key]);
+    }
+}
+
+
+showAddress(address);
+
 
 
 // 2-task
+function displayReadingStatus(library) {
+    for (let book of library) {
+        let status = book.readingStatus ? "o'qilmoqda" : "o'qilmagan";
+        console.log(`"${book.title}" kitobi, ${book.author} tomonidan yozilgan va hozir ${status}.`);
+    }
+}
 
 let library = [
     {
@@ -27,7 +43,10 @@ let library = [
         readingStatus: false
     }];
 
-console.log(library);
+
+displayReadingStatus(library);
+
+
 
 
 // 3-task
